@@ -11,15 +11,15 @@ import javax.persistence.Table;
 public class Ingredient {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private int id;
-	
-	private int calories;
-	private double fats;
-	private double proteins;
-	private int carbs;
-	private int caloriesPerGram;
-	
 	private String name;
+	
+	private int caloriesPerGram;
+	private double fatsPerGram;
+	private double proteinsPerGram;
+	private int carbsPerGram;
+	
 	public int getId() {
 		return id;
 	}
@@ -32,38 +32,29 @@ public class Ingredient {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getCalories() {
-		return calories;
-	}
-	public void setCalories(int calories) {
-		this.calories = calories;
-	}
-	public double getFats() {
-		return fats;
-	}
-	public void setFats(double fats) {
-		this.fats = fats;
-	}
-	public double getProteins() {
-		return proteins;
-	}
-	public void setProteins(double proteins) {
-		this.proteins = proteins;
-	}
-	public int getCarbs() {
-		return carbs;
-	}
-	public void setCarbs(int carbs) {
-		this.carbs = carbs;
-	}
 	public int getCaloriesPerGram() {
 		return caloriesPerGram;
 	}
 	public void setCaloriesPerGram(int caloriesPerGram) {
 		this.caloriesPerGram = caloriesPerGram;
 	}
-	
-	
-	
-	
+	public double getFatsPerGram() {
+		return fatsPerGram;
+	}
+	public void setFatsPerGram(double fatsPerGram) {
+		this.fatsPerGram = fatsPerGram;
+	}
+	public double getProteinsPerGram() {
+		return proteinsPerGram;
+	}
+	public void setProteinsPerGram(double proteinsPerGram) {
+		this.proteinsPerGram = proteinsPerGram;
+	}
+	public int getCarbsPerGram() {
+		return carbsPerGram;
+	}
+	public void setCarbsPerGram(int carbsPerGram) {
+		this.carbsPerGram = carbsPerGram;
+	}
+		
 }
