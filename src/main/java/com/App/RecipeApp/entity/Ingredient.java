@@ -1,24 +1,24 @@
 package com.App.RecipeApp.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "ingredient")
-public class Food {
+public class Ingredient {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
 	
+	private int id;
 	private String name;
 	
-	private float calories;
-	private float proteins;
-	private float carbs;
-	private float fats;
+	private double calories;
+	private double fats;
+	private double proteins;
+	private double carbs;
 	public int getId() {
 		return id;
 	}
@@ -31,29 +31,29 @@ public class Food {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public float getCalories() {
+	public double getCalories() {
 		return calories;
 	}
-	public void setCalories(float calories) {
+	public void setCalories(double calories) {
 		this.calories = calories;
 	}
-	public float getProteins() {
-		return proteins;
-	}
-	public void setProteins(float proteins) {
-		this.proteins = proteins;
-	}
-	public float getCarbs() {
-		return carbs;
-	}
-	public void setCarbs(float carbs) {
-		this.carbs = carbs;
-	}
-	public float getFats() {
+	public double getFats() {
 		return fats;
 	}
-	public void setFats(float fats) {
+	public void setFats(double fats) {
 		this.fats = fats;
+	}
+	public double getProteins() {
+		return proteins;
+	}
+	public void setProteins(double proteins) {
+		this.proteins = proteins;
+	}
+	public double getCarbs() {
+		return carbs;
+	}
+	public void setCarbs(double carbs) {
+		this.carbs = carbs;
 	}
 	
 	
