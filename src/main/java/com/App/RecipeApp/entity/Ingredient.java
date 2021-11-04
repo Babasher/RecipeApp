@@ -15,11 +15,10 @@ public class Ingredient {
 	private int id;
 	private String name;
 	
-	private int caloriesPerGram;
-	private double fatsPerGram;
-	private double proteinsPerGram;
-	private int carbsPerGram;
-	
+	private double calories;
+	private double fats;
+	private double proteins;
+	private double carbs;
 	public int getId() {
 		return id;
 	}
@@ -32,29 +31,30 @@ public class Ingredient {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getCaloriesPerGram() {
-		return caloriesPerGram;
+	public double getCalories() {
+		return calories;
 	}
-	public void setCaloriesPerGram(int caloriesPerGram) {
-		this.caloriesPerGram = caloriesPerGram;
+	public void setCalories(double calories) {
+		this.calories = calories;
 	}
-	public double getFatsPerGram() {
-		return fatsPerGram;
+	public double getFats() {
+		return fats;
 	}
-	public void setFatsPerGram(double fatsPerGram) {
-		this.fatsPerGram = fatsPerGram;
+	public void setFats(double fats) {
+		this.fats = fats;
 	}
-	public double getProteinsPerGram() {
-		return proteinsPerGram;
+	public double getProteins() {
+		return proteins;
 	}
-	public void setProteinsPerGram(double proteinsPerGram) {
-		this.proteinsPerGram = proteinsPerGram;
+	public void setProteins(double proteins) {
+		this.proteins = proteins;
 	}
-	public int getCarbsPerGram() {
-		return carbsPerGram;
+	public double getCarbs() {
+		return carbs;
 	}
-	public void setCarbsPerGram(int carbsPerGram) {
-		this.carbsPerGram = carbsPerGram;
+	public void setCarbs(double carbs) {
+		this.carbs = carbs;
 	}
-		
+	
+	
 }
