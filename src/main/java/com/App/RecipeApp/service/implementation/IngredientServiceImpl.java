@@ -1,5 +1,7 @@
 package com.App.RecipeApp.service.implementation;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.App.RecipeApp.entity.Ingredient;
@@ -19,6 +21,11 @@ public class IngredientServiceImpl implements IngredientService{
 	@Override
 	public Ingredient saveIngredient(Ingredient ingredient) {
 		return ingredientRepository.save(ingredient);
+	}
+
+	@Override
+	public List<Ingredient> getAllIngredients() {
+		return ingredientRepository.findAll();
 	}
 
 }
