@@ -19,11 +19,11 @@ springboot-starter-test
 mysql-connector-java
 
 ## To Do ##
-~~Implement saveIngredient [x]~~
-~~Implement getAllingredients [x]~~
-Implement getIngredientByName []
-Implement updateIngredient []
-Implement deleteIngredient []
+- ~~Implement saveIngredient [x]~~
+- ~~Implement getAllingredients [x]~~
+- Implement getIngredientByName []
+- Implement updateIngredient []
+- Implement deleteIngredient []
 
 
 Implement a pantry to store all of user's readily available ingredients
