@@ -21,14 +21,15 @@ mysql-connector-java
 ## To Do ##
 - ~~Implement saveIngredient [x]~~
 - ~~Implement getAllingredients [x]~~
-- Implement getIngredientByName []
+- ~~Implement getIngredientByName [x]~~
+-- Need to create a custom exception class for ingredients that don't exist
 - Implement updateIngredient []
 - Implement deleteIngredient []
 
 
-Implement a pantry to store all of user's readily available ingredients
+-Implement a pantry to store all of user's readily available ingredients
 	
 
-Notes: Look into cookies / admin permission. In general the ingredients table is primarily just filled by admins - not clients, unless given permission.
+Notes: Look into cookies / Admin permission. In general the ingredients table are populated by Admins only.
 Ingredients table should be very large, so all users of the app will have access to various ingredients. 
 
