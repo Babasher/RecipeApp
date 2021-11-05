@@ -1,6 +1,7 @@
 package com.App.RecipeApp.service.implementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -27,5 +28,12 @@ public class IngredientServiceImpl implements IngredientService{
 	public List<Ingredient> getAllIngredients() {
 		return ingredientRepository.findAll();
 	}
+
+	@Override
+	public Ingredient getIngredientByName(String name) {
+		Optional<Ingredient> ingredient = (Optional<Ingredient>) ingredientRepository.findByName(name);
+		return ingredient.get();
+	}
+
 
 }
