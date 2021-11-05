@@ -27,7 +27,7 @@ mysql-connector-java
 
 
 Implement a pantry to store all of user's readily available ingredients
-	- should be able to 
+	
 
 Notes: Look into cookies / admin permission. In general the ingredients table is primarily just filled by admins - not clients, unless given permission.
 Ingredients table should be very large, so all users of the app will have access to various ingredients. 
