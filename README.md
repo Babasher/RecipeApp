@@ -22,7 +22,7 @@ mysql-connector-java
 - ~~Implement saveIngredient [x]~~
 - ~~Implement getAllingredients [x]~~
 - ~~Implement getIngredientByName [x]~~
--- Need to create a custom exception class for ingredients that don't exist
+- ~~custom exception class for ingredients that don't exist [x]~~
 - Implement updateIngredient []
 - Implement deleteIngredient []
 
