@@ -47,5 +47,21 @@ public class IngredientServiceImpl implements IngredientService{
 		
 	}
 
+	@Override
+	public Ingredient updateIngredient(Ingredient ingredient, String name) {
+		Ingredient existingIngredient = ingredientRepository.findByName(name).orElseThrow(() -> 
+				new ResourceNotFoundException("Ingredient", "Name", name));
+		
+		existingIngredient.setCalories(ingredient.getCalories());
+		existingIngredient.setCarbs(ingredient.getCarbs());
+		existingIngredient.setFats(ingredient.getFats());
+		existingIngredient.setProteins(ingredient.getProteins());
+		existingIngredient.setName(ingredient.getName());
+		
+		ingredientRepository.save(existingIngredient);
+		
+		return null;
+	}
+
 
 }
