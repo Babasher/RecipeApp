@@ -26,8 +26,8 @@ mysql-connector-java
 - ~~Implement updateIngredient [x]~~
 - Implement deleteIngredient []
 
-
--Implement a pantry to store all of user's readily available ingredients
+- Refactor ingredient table so that each item's macro is based on a general weight (lbs or grams)
+- Implement a pantry to store all of user's readily available ingredients
 	
 
 Notes: Look into cookies / Admin permission. In general the ingredients table are populated by Admins only.
