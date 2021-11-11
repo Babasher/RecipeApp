@@ -7,4 +7,5 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 
 public class Meal {
+	
 }
