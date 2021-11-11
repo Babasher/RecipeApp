@@ -19,6 +19,9 @@ public class Ingredient {
 	private double fats;
 	private double proteins;
 	private double carbs;
+	private String serviceSize; 
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -54,6 +57,12 @@ public class Ingredient {
 	}
 	public void setCarbs(double carbs) {
 		this.carbs = carbs;
+	}
+	public String getServiceSize() {
+		return serviceSize;
+	}
+	public void setServiceSize(String serviceSize) {
+		this.serviceSize = serviceSize;
 	}
 	
 	
