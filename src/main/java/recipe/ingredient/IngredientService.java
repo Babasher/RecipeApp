@@ -1,8 +1,6 @@
-package com.App.RecipeApp.service;
+package recipe.ingredient;
 
 import java.util.List;
-
-import com.App.RecipeApp.entity.Ingredient;
 
 public interface IngredientService {
 	Ingredient saveIngredient(Ingredient ingredient);

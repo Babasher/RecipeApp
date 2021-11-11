@@ -1,4 +1,4 @@
-package com.App.RecipeApp.entity;
+package recipe.ingredient;
 
 import javax.persistence.Entity;
 import javax.persistence.GenerationType;

@@ -1,4 +1,4 @@
-package com.App.RecipeApp.controller;
+package recipe.ingredient;
 
 import java.util.List;
 
@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.App.RecipeApp.entity.Ingredient;
-import com.App.RecipeApp.service.IngredientService;
 
 @RestController
 @RequestMapping("/api/ingredients")

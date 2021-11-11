@@ -1,11 +1,9 @@
-package com.App.RecipeApp.repository;
+package recipe.ingredient;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import com.App.RecipeApp.entity.Ingredient;
 
 public interface IngredientRepository extends JpaRepository<Ingredient, Integer>{
 	@Query("FROM Ingredient WHERE name = ?1")
