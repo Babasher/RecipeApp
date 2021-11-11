@@ -19,7 +19,7 @@ public class Ingredient {
 	private double fats;
 	private double proteins;
 	private double carbs;
-	private String serviceSize; 
+	private String servingSize; 
 	
 	
 	public int getId() {
@@ -58,11 +58,11 @@ public class Ingredient {
 	public void setCarbs(double carbs) {
 		this.carbs = carbs;
 	}
-	public String getServiceSize() {
-		return serviceSize;
+	public String getServingSize() {
+		return servingSize;
 	}
-	public void setServiceSize(String serviceSize) {
-		this.serviceSize = serviceSize;
+	public void setServingSize(String serviceSize) {
+		this.servingSize = serviceSize;
 	}
 	
 	
