@@ -58,5 +58,16 @@ public class IngredientServiceImpl implements IngredientService{
 		return null;
 	}
 
+	@Override
+	public void deleteIngredientByName(String name) {
+		ingredientRepository.findByName(name).orElseThrow(() -> 
+			new ResourceNotFoundException("Ingredient", "Name", name));
+		
+		ingredientRepository.deleteByName(name);
+		
+		
+		
+	}	
+
 
 }
