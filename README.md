@@ -25,7 +25,7 @@ mysql-connector-java
 - ~~custom exception class for ingredients that don't exist [x]~~
 - ~~Implement updateIngredient [x]~~
 - ~~Refactor ingredient table so that each item's macro is based on a general weight (lbs or grams)~~
-- Implement deleteIngredient []
+- ~~Implement deleteIngredient [x]~~
 - Implement meal entity
 - figure out algorithm for calculating serving size and calories
 
