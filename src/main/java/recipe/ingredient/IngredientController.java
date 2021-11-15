@@ -1,9 +1,10 @@
-package com.App.RecipeApp.controller;
+package recipe.ingredient;
 
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,9 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.App.RecipeApp.entity.Ingredient;
-import com.App.RecipeApp.service.IngredientService;
 
 @RestController
 @RequestMapping("/api/ingredients")
@@ -50,5 +48,12 @@ public class IngredientController {
 														@RequestBody Ingredient ingredient) {
 		return new ResponseEntity<Ingredient>(ingredientService.updateIngredient(ingredient, name), HttpStatus.OK);
 		
+	}
+	
+	@DeleteMapping("{name}")
+	public ResponseEntity<String> deleteIngredient(@PathVariable("name") String name) {
+		ingredientService.deleteIngredientByName(name);
+		
+		return new ResponseEntity<String>("Employee Deleted", HttpStatus.OK);
 	}
 }

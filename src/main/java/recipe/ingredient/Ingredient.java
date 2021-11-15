@@ -1,4 +1,4 @@
-package com.App.RecipeApp.entity;
+package recipe.ingredient;
 
 import javax.persistence.Entity;
 import javax.persistence.GenerationType;
@@ -19,6 +19,9 @@ public class Ingredient {
 	private double fats;
 	private double proteins;
 	private double carbs;
+	private String servingSize; 
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -54,6 +57,12 @@ public class Ingredient {
 	}
 	public void setCarbs(double carbs) {
 		this.carbs = carbs;
+	}
+	public String getServingSize() {
+		return servingSize;
+	}
+	public void setServingSize(String serviceSize) {
+		this.servingSize = serviceSize;
 	}
 	
 	

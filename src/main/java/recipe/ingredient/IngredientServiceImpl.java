@@ -1,14 +1,8 @@
-package com.App.RecipeApp.service.implementation;
+package recipe.ingredient;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-
-import com.App.RecipeApp.entity.Ingredient;
-import com.App.RecipeApp.exception.ResourceNotFoundException;
-import com.App.RecipeApp.repository.IngredientRepository;
-import com.App.RecipeApp.service.IngredientService;
+import recipe.exception.*;
 
 @Service
 public class IngredientServiceImpl implements IngredientService{
@@ -57,11 +51,23 @@ public class IngredientServiceImpl implements IngredientService{
 		existingIngredient.setFats(ingredient.getFats());
 		existingIngredient.setProteins(ingredient.getProteins());
 		existingIngredient.setName(ingredient.getName());
+		existingIngredient.setServingSize(ingredient.getServingSize());
 		
 		ingredientRepository.save(existingIngredient);
 		
 		return null;
 	}
+
+	@Override
+	public void deleteIngredientByName(String name) {
+		ingredientRepository.findByName(name).orElseThrow(() -> 
+			new ResourceNotFoundException("Ingredient", "Name", name));
+		
+		ingredientRepository.deleteByName(name);
+		
+		
+		
+	}	
 
 
 }
