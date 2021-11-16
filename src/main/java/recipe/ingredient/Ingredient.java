@@ -1,17 +1,22 @@
 package recipe.ingredient;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import recipe.meal.Meal;
 
 @Entity
 @Table(name = "ingredient")
 public class Ingredient {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private int id;
 	private String name;
 	
@@ -20,6 +25,9 @@ public class Ingredient {
 	private double proteins;
 	private double carbs;
 	private String servingSize; 
+	
+	@ManyToOne()
+	private Meal meal;
 	
 	
 	public int getId() {
@@ -63,6 +71,12 @@ public class Ingredient {
 	}
 	public void setServingSize(String serviceSize) {
 		this.servingSize = serviceSize;
+	}
+	public Meal getMeal() {
+		return meal;
+	}
+	public void setMeal(Meal meal) {
+		this.meal = meal;
 	}
 	
 	
