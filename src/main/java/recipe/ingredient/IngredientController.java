@@ -27,7 +27,6 @@ public class IngredientController {
 	@PostMapping()
 	public ResponseEntity<Ingredient> saveIngredient(@RequestBody Ingredient ingredient) {
 		return new ResponseEntity<Ingredient>(ingredientService.saveIngredient(ingredient), HttpStatus.CREATED);
-		
 	}
 	
 	//build create REST API
