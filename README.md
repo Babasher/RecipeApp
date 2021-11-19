@@ -26,7 +26,10 @@ mysql-connector-java
 - ~~Implement updateIngredient [x]~~
 - ~~Refactor ingredient table so that each item's macro is based on a general weight (lbs or grams)~~
 - ~~Implement deleteIngredient [x]~~
-- Implement meal entity
+- ~~Implement meal entity [x]~~
+- ~~Implement saveMeal [x]~~
+- Implement showAllmeals []
+- Figure out how foreign keys work with ingredients
 - figure out algorithm for calculating serving size and calories
 
 

@@ -1,17 +1,13 @@
 package recipe.ingredient;
 
 import javax.persistence.Entity;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "ingredient")
 public class Ingredient {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private int id;
 	private String name;
 	
@@ -20,7 +16,7 @@ public class Ingredient {
 	private double proteins;
 	private double carbs;
 	private String servingSize; 
-	
+
 	
 	public int getId() {
 		return id;
@@ -65,5 +61,13 @@ public class Ingredient {
 		this.servingSize = serviceSize;
 	}
 	
+	/*
+	public Meal getMeal() {
+		return meal;
+	}
+	public void setMeal(Meal meal) {
+		this.meal = meal;
+	}
+	*/
 	
 }
