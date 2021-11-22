@@ -19,10 +19,6 @@ public class MealController {
 	
 	@Autowired
 	private MealRepository mealRepository;
-	/*
-	@Autowired
-	private IngredientRepository ingredientRepository;
-	*/
 	
 	@PostMapping()
 	public ResponseEntity<Meal> saveMeal(@RequestBody Meal meal) {
@@ -31,7 +27,8 @@ public class MealController {
 	
 	@GetMapping("/findAllOrders")
 	public List<Meal> findAllMeals() {
-		return mealRepository.findAll();
+		//return mealRepository.findAll();
+		return mealService.findAll();
 	}
 	
 	
