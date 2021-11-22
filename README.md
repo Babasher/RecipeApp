@@ -29,6 +29,9 @@ mysql-connector-java
 - ~~Implement meal entity [x]~~
 - ~~Implement saveMeal [x]~~
 - ~~Implement showAllmeals [x]~~
+- ~~Implement retrieving nutrition information for a meal [x]~~
+- Display nutrition info in the response entity []
+- Parse serving sizes and updating nutrition based on serving sizes []
 - Figure out how foreign keys work with ingredients
 - figure out algorithm for calculating serving size and calories
 
