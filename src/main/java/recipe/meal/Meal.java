@@ -26,15 +26,12 @@ public class Meal {
 	@JoinColumn(name = "ing_fk", referencedColumnName = "id")
 	private List<Ingredient> ingredients = new ArrayList<>();
 
-	
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
@@ -50,6 +47,4 @@ public class Meal {
 	public void setIngredients(List<Ingredient> ingredients) {
 		this.ingredients = ingredients;
 	}
-	
-	
 }

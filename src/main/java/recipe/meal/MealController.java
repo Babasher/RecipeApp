@@ -6,19 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import recipe.ingredient.Ingredient;
 
 @RestController
 @RequestMapping("/api/meals")
 public class MealController {
 	@Autowired
 	private MealService mealService;
-	
-	@Autowired
-	private MealRepository mealRepository;
 	
 	@PostMapping()
 	public ResponseEntity<Meal> saveMeal(@RequestBody Meal meal) {
@@ -27,9 +27,12 @@ public class MealController {
 	
 	@GetMapping("/findAllOrders")
 	public List<Meal> findAllMeals() {
-		//return mealRepository.findAll();
 		return mealService.findAll();
 	}
 	
+	@GetMapping("{name}")
+	public ResponseEntity<Meal> getMealByName(@PathVariable("name") String name) {
+		return new ResponseEntity<Meal>(mealService.getMealByName(name), HttpStatus.OK);
+	}
 	
 }
