@@ -22,4 +22,10 @@ public class MealServiceImpl implements MealService{
 	public List<Meal> findAll() {
 		return mealRepository.findAll();
 	}
+
+	@Override
+	public Meal getMealByName(String name) {
+		return mealRepository.findByName(name);
+	}
+
 }
