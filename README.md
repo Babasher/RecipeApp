@@ -28,7 +28,7 @@ mysql-connector-java
 - ~~Implement deleteIngredient [x]~~
 - ~~Implement meal entity [x]~~
 - ~~Implement saveMeal [x]~~
-- Implement showAllmeals []
+- ~~Implement showAllmeals [x]~~
 - Figure out how foreign keys work with ingredients
 - figure out algorithm for calculating serving size and calories
 

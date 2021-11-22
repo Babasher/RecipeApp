@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import recipe.exception.ResourceNotFoundException;
+
 @Service
 public class MealServiceImpl implements MealService{
 	MealRepository mealRepository;
@@ -25,7 +27,8 @@ public class MealServiceImpl implements MealService{
 
 	@Override
 	public Meal getMealByName(String name) {
-		return mealRepository.findByName(name);
+		return mealRepository.findByName(name).orElseThrow(() -> 
+		new ResourceNotFoundException("Meal", "Name", name));
 	}
 
 }

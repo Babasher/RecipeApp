@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import recipe.ingredient.Ingredient;
+
 @RestController
 @RequestMapping("/api/meals")
 public class MealController {
@@ -23,15 +25,14 @@ public class MealController {
 		return new ResponseEntity<Meal>(mealService.saveMeal(meal), HttpStatus.CREATED); 
 	}
 	
-	@GetMapping("{name}")
-	public ResponseEntity<Meal> getMealByName(@PathVariable("name") String name) {
-		return new ResponseEntity<Meal>(mealService.getMealByName(name), HttpStatus.OK);
-	}
-	
 	@GetMapping("/findAllOrders")
 	public List<Meal> findAllMeals() {
 		return mealService.findAll();
 	}
 	
+	@GetMapping("{name}")
+	public ResponseEntity<Meal> getMealByName(@PathVariable("name") String name) {
+		return new ResponseEntity<Meal>(mealService.getMealByName(name), HttpStatus.OK);
+	}
 	
 }
