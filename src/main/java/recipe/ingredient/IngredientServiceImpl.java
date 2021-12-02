@@ -51,7 +51,7 @@ public class IngredientServiceImpl implements IngredientService{
 		existingIngredient.setFats(ingredient.getFats());
 		existingIngredient.setProteins(ingredient.getProteins());
 		existingIngredient.setName(ingredient.getName());
-		existingIngredient.setServingSize(ingredient.getServingSize());
+		existingIngredient.setSingleServingSize(ingredient.getSingleServingSize());
 		
 		ingredientRepository.save(existingIngredient);
 		
