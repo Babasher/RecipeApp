@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import recipe.ingredient.Ingredient;
-
 @RestController
 @RequestMapping("/api/meals")
 public class MealController {
@@ -22,6 +20,7 @@ public class MealController {
 	
 	@PostMapping()
 	public ResponseEntity<Meal> saveMeal(@RequestBody Meal meal) {
+		mealService.initialMealNutritionSave(meal); //calculates macros of a meal based on its ingredients
 		return new ResponseEntity<Meal>(mealService.saveMeal(meal), HttpStatus.CREATED); 
 	}
 	

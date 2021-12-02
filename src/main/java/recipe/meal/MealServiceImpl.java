@@ -37,6 +37,15 @@ public class MealServiceImpl implements MealService{
 			new ResourceNotFoundException("Meal", "Name", name));
 	}
 	
+	@Override
+	public void initialMealNutritionSave(Meal meal) {
+		List<Double> nutrition = getNutrition(meal);
+		meal.setCalories(nutrition.get(0));
+		meal.setFats(nutrition.get(1));
+		meal.setProteins(nutrition.get(2));
+		meal.setCarbs(nutrition.get(3));
+	}
+	
 	private List<Double> getNutrition(Meal meal) {
 		List<Double> results = new ArrayList<>();
 		double calories = 0;

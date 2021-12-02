@@ -15,7 +15,8 @@ public class Ingredient {
 	private double fats;
 	private double proteins;
 	private double carbs;
-	private String servingSize; 
+	private String singleServingSize;
+	private int userPortionSize;
 
 	
 	public int getId() {
@@ -54,20 +55,18 @@ public class Ingredient {
 	public void setCarbs(double carbs) {
 		this.carbs = carbs;
 	}
-	public String getServingSize() {
-		return servingSize;
+	public String getSingleServingSize() {
+		return singleServingSize;
 	}
-	public void setServingSize(String serviceSize) {
-		this.servingSize = serviceSize;
+	public void setSingleServingSize(String singleServingSize) {
+		this.singleServingSize = singleServingSize;
+	}
+	public int getUserPortionSize() {
+		return userPortionSize;
+	}
+	public void setUserPortionSize(int userPortionSize) {
+		this.userPortionSize = userPortionSize;
 	}
 	
-	/*
-	public Meal getMeal() {
-		return meal;
-	}
-	public void setMeal(Meal meal) {
-		this.meal = meal;
-	}
-	*/
-	
+
 }

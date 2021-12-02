@@ -22,6 +22,12 @@ public class Meal {
 	private int id;
 	private String name;
 	
+	private double calories;
+	private double fats;
+	private double proteins;
+	private double carbs;
+	private String portion;
+	
 	@OneToMany(targetEntity = Ingredient.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "ing_fk", referencedColumnName = "id")
 	private List<Ingredient> ingredients = new ArrayList<>();
@@ -47,4 +53,36 @@ public class Meal {
 	public void setIngredients(List<Ingredient> ingredients) {
 		this.ingredients = ingredients;
 	}
+	public double getCalories() {
+		return calories;
+	}
+	public void setCalories(double calories) {
+		this.calories = calories;
+	}
+	public double getFats() {
+		return fats;
+	}
+	public void setFats(double fats) {
+		this.fats = fats;
+	}
+	public double getProteins() {
+		return proteins;
+	}
+	public void setProteins(double proteins) {
+		this.proteins = proteins;
+	}
+	public double getCarbs() {
+		return carbs;
+	}
+	public void setCarbs(double carbs) {
+		this.carbs = carbs;
+	}
+	public String getPortion() {
+		return portion;
+	}
+	public void setPortion(String portion) {
+		this.portion = portion;
+	}
+	
+	
 }
