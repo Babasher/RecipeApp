@@ -20,7 +20,7 @@ public class MealController {
 	
 	@PostMapping()
 	public ResponseEntity<Meal> saveMeal(@RequestBody Meal meal) {
-		mealService.updateNutrition(meal); //calculates macros of a meal based on its ingredients
+		mealService.initialMealNutritionSave(meal); //calculates macros of a meal based on its ingredients
 		return new ResponseEntity<Meal>(mealService.saveMeal(meal), HttpStatus.CREATED); 
 	}
 	

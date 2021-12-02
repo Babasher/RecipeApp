@@ -38,7 +38,7 @@ public class MealServiceImpl implements MealService{
 	}
 	
 	@Override
-	public void updateNutrition(Meal meal) {
+	public void initialMealNutritionSave(Meal meal) {
 		List<Double> nutrition = getNutrition(meal);
 		meal.setCalories(nutrition.get(0));
 		meal.setFats(nutrition.get(1));
@@ -67,7 +67,5 @@ public class MealServiceImpl implements MealService{
 		
 		return results;
 	}
-
-	
 
 }
