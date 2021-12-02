@@ -45,6 +45,7 @@ public class MealServiceImpl implements MealService{
 		meal.setProteins(nutrition.get(2));
 		meal.setCarbs(nutrition.get(3));
 	}
+	
 	private List<Double> getNutrition(Meal meal) {
 		List<Double> results = new ArrayList<>();
 		double calories = 0;
