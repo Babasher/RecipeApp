@@ -24,7 +24,7 @@ public class MealController {
 		return new ResponseEntity<Meal>(mealService.saveMeal(meal), HttpStatus.CREATED); 
 	}
 	
-	@GetMapping("/findAllOrders")
+	@GetMapping()
 	public List<Meal> findAllMeals() {
 		return mealService.findAll();
 	}

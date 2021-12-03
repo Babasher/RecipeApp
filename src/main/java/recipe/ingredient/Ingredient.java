@@ -16,7 +16,7 @@ public class Ingredient {
 	private double proteins;
 	private double carbs;
 	private String singleServingSize;
-	private int userPortionSize;
+	private double userPortionSize;
 
 	
 	public int getId() {
@@ -61,7 +61,7 @@ public class Ingredient {
 	public void setSingleServingSize(String singleServingSize) {
 		this.singleServingSize = singleServingSize;
 	}
-	public int getUserPortionSize() {
+	public double getUserPortionSize() {
 		return userPortionSize;
 	}
 	public void setUserPortionSize(int userPortionSize) {
