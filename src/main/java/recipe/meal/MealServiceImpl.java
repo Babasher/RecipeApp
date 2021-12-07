@@ -1,7 +1,9 @@
 package recipe.meal;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
@@ -37,6 +39,8 @@ public class MealServiceImpl implements MealService{
 			new ResourceNotFoundException("Meal", "Name", name));
 	}
 	
+	
+	
 	@Override
 	public void initialMealNutritionSave(Meal meal) {
 		List<Double> nutrition = getNutrition(meal);
@@ -47,25 +51,26 @@ public class MealServiceImpl implements MealService{
 	}
 	
 	private List<Double> getNutrition(Meal meal) {
-		List<Double> results = new ArrayList<>();
-		double calories = 0;
-		double fats = 0;
-		double proteins = 0;
-		double carbs = 0;
 		
+		List<Double> result = new ArrayList<>();
 		for(Ingredient i : meal.getIngredients()) {
-			calories += i.getCalories();
-			fats += i.getFats();
-			proteins += i.getProteins();
-			carbs += i.getCarbs();
+			result.add(i.getCalories() * i.getUserPortionSize());
+			result.add(i.getFats() * i.getFats());
+			result.add(i.getProteins() * i.getProteins());
+			result.add(i.getCarbs() * i.getCarbs());
 		}
 		
-		results.add(calories);
-		results.add(fats);
-		results.add(proteins);
-		results.add(carbs);
-		
-		return results;
+		return result;
 	}
+
+	@Override
+	public void deleteByName(String name) {
+		mealRepository.findByName(name).orElseThrow(() -> 
+		new ResourceNotFoundException("Ingredient", "Name", name));
+	
+		mealRepository.deleteByName(name);
+	}
+
+
 
 }
