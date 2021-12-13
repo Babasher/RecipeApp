@@ -31,15 +31,15 @@ mysql-connector-java
 - ~~Implement showAllmeals [x]~~
 - ~~Implement retrieving nutrition information for a meal [x]~~
 - ~~Display nutrition info for entire meal in the response entity [x]~~
-- Format the macros of meal entity to two decimals []
-- Parse serving sizes and updating nutrition based on serving sizes []
+- ~~Parse serving sizes and updating nutrition based on serving sizes [x]~~
+- ~~figure out algorithm for calculating serving size and calories[x]~~
+
+- look into JOptionPane as a starter UI for the application
+- implement delete meal method (currently does not work) 
+- Format the macros of meal entity to two decimals 
 - Figure out how foreign keys work with ingredients
-- figure out algorithm for calculating serving size and calories
-
-
 - Implement a pantry to store all of user's readily available ingredients
 	
-
 Notes: Look into cookies / Admin permission. In general the ingredients table are populated by Admins only.
 Ingredients table should be very large, so all users of the app will have access to various ingredients. 
 
