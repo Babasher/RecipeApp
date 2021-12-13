@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,6 +33,13 @@ public class MealController {
 	@GetMapping("{name}")
 	public ResponseEntity<Meal> getMealByName(@PathVariable("name") String name) {
 		return new ResponseEntity<Meal>(mealService.getMealByName(name), HttpStatus.OK);
+	}
+	
+	@DeleteMapping("{name}")
+	public ResponseEntity<String> deleteMeal(@PathVariable("name") String name) {
+		mealService.deleteByName(name);
+		
+		return new ResponseEntity<String>("Employee Deleted", HttpStatus.OK);
 	}
 	
 }
